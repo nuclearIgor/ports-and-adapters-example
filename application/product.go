@@ -22,7 +22,7 @@ type ProductInterface interface {
 
 type ProductServiceInterface interface {
 	Get(id string) (ProductInterface, error)
-	Crate(name string, price int) (ProductInterface, error)
+	Create(name string, price int) (ProductInterface, error)
 	Enable(product ProductInterface) (ProductInterface, error)
 	Disable(product ProductInterface) (ProductInterface, error)
 }

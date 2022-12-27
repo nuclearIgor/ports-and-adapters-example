@@ -157,9 +157,9 @@ func (m *MockProductServiceInterface) EXPECT() *MockProductServiceInterfaceMockR
 }
 
 // Crate mocks base method.
-func (m *MockProductServiceInterface) Crate(name string, price int) (application.ProductInterface, error) {
+func (m *MockProductServiceInterface) Create(name string, price int) (application.ProductInterface, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Crate", name, price)
+	ret := m.ctrl.Call(m, "Create", name, price)
 	ret0, _ := ret[0].(application.ProductInterface)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
@@ -168,7 +168,7 @@ func (m *MockProductServiceInterface) Crate(name string, price int) (application
 // Crate indicates an expected call of Crate.
 func (mr *MockProductServiceInterfaceMockRecorder) Crate(name, price interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Crate", reflect.TypeOf((*MockProductServiceInterface)(nil).Crate), name, price)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Create", reflect.TypeOf((*MockProductServiceInterface)(nil).Create), name, price)
 }
 
 // Disable mocks base method.
